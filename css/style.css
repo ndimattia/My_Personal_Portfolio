@@ -116,26 +116,23 @@ a:hover {
 .row {
     display: flex;
     justify-content: space-between;
-    max-width: 1000px;
     margin: 0 auto;
-}
-
-#profile {
-    text-align: left;
 }
 
 #profile-pic {
     width: 50%;
+    flex: 50%;
 }
 
 #profile-pic img {
     height: 36rem;
-    flex: 50%;
+    border-radius: 50%;
 }
 
 #profile-text {
     padding: 4rem 0rem 12rem 4rem;
     flex: 50%;
+    text-align: left;
 }
 
 #welcome-text {
@@ -257,6 +254,96 @@ a:hover {
 }
 
 
+/* PROJECTS */
+
+.projects {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 2rem;
+}
+
+.project-img {
+    border-bottom: 1px solid #363636; 
+}
+
+.projects img {
+    max-width: 450px;
+    margin: 8px 0px 0px 25px;
+    border-radius: 10px;
+}
+
+.project-card {
+    margin: 28px 24px;
+    padding: 24px;
+    padding-top: 36px;
+    max-width: 500px;
+    text-align: left;
+    border-radius: 10px;
+    line-height: 2rem;
+    color: #ffffff;
+    background-color: #272727;
+}
+
+.project-card:hover {
+    box-shadow: 0px 0px 10px 3px #008cff;
+    transition: none;
+}
+
+.project-card:nth-child(2), .project-card:nth-child(4) {
+    transition-delay: 200ms;
+}
+.projects h3 {
+    margin-top: 24px;
+    margin-bottom: 8px;
+    font-size: 1.5em;
+}
+
+.projects p {
+    margin-top: 8px;
+    font-size: 1.2em;
+}
+
+.projects .btn-container {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    justify-content:space-between;
+    font-size: 2em;
+}
+
+.btn-projects {
+    padding: 1rem;
+    width: 12rem;
+    border-radius: 2rem;
+    font-size: .5em;
+    font-weight: bold;
+    transition: all 300ms ease;
+    color:#ffffff;
+}
+
+.btn-color-three {
+    background: none;
+    border: #008cff 0.1rem solid;
+}
+
+.btn-color-three:hover {
+    cursor: pointer;
+    background: #ffffff;
+    color:#008cff;
+}
+
+.projects a {
+    color:#008cff;
+    text-decoration: none;
+    text-decoration-color: #ffffff;
+}
+
+.projects a:hover {
+    color: #008cff;
+}
+
+
 /* CV */
 /*
 .cv-row {
@@ -269,6 +356,10 @@ a:hover {
 .cv-column {
     flex: 50%;
 } */
+ 
+#cv {
+    padding-bottom: 12rem;
+}
 
 .timeline {
     position: relative;
@@ -288,12 +379,10 @@ a:hover {
     background: #b1b1b1;
     display: inline-block;
     position: absolute;
-   /* left: 27px; */
     left: 50%;
     top: 0;
     width: 2px;
     height: 100%;
-    z-index: 1;
 }
 
 .timeline ul li {
@@ -350,100 +439,15 @@ a:hover {
 }
 
 .timeline-content p {
-    font-size: 1.2em;
+    font-size: 1.5em;
+    font-weight: bold;
     font-style: italic;
     background: linear-gradient(to right, #003F77, #008cff);
                 -webkit-background-clip: text;
                 background-clip: text;
                 color: transparent;
     margin-top: 4px;
-}
-
-
-/* PROJECTS */
-
-.projects {
-    display: flex;
-    flex-direction:row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding-top: 2rem;
-    padding-bottom: 12rem;
-}
-
-.projects img {
-    max-width: 450px;
-    margin: 8px 0px 0px 25px;
-    border-radius: 10px;
-}
-
-.project-card {
-    margin: 28px 24px;
-    padding: 24px;
-    padding-top: 36px;
-    max-width: 500px;
-    text-align: left;
-    border-radius: 10px;
-    line-height: 2rem;
-    color: #ffffff;
-    background-color: #272727;
-}
-
-.project-card:hover {
-    box-shadow: 0px 0px 10px 3px #008cff;
-    transition: none;
-}
-
-.project-card:nth-child(2), .project-card:last-child {
-    transition-delay: 200ms;
-}
-.projects h3 {
-    margin-top: 24px;
-    margin-bottom: 8px;
-    font-size: 1.5em;
-}
-
-.projects p {
-    margin-top: 8px;
-    font-size: 1.2em;
-}
-
-.projects .btn-container {
-    margin-top: 40px;
-    margin-bottom: 20px;
-    justify-content:space-between;
-    font-size: 2em;
-}
-
-.btn-projects {
-    padding: 1rem;
-    width: 12rem;
-    border-radius: 2rem;
-    font-size: .5em;
-    font-weight: bold;
-    transition: all 300ms ease;
-    color:#ffffff;
-}
-
-.btn-color-three {
-    background: none;
-    border: #008cff 0.1rem solid;
-}
-
-.btn-color-three:hover {
-    cursor: pointer;
-    background: #ffffff;
-    color:#008cff;
-}
-
-.projects a {
-    color:#008cff;
-    text-decoration: none;
-    text-decoration-color: #ffffff;
-}
-
-.projects a:hover {
-    color: #008cff;
+    margin-bottom: 4px;
 }
 
 
@@ -454,13 +458,4 @@ footer {
     padding: 60px 0;
     background: linear-gradient(to right, #0072CE, #003F77);
     color: white;
-}
-
-
-/* MEDIA QUERIES */
-
-@meida(prefers-reduced-motion) {
-    .hidden {
-        transition: none;
-    }
 }
