@@ -1,3 +1,12 @@
+/* FONT */
+@font-face {
+    font-family: 'Century Gothic';
+    src: url('./fonts/CenturyGothic.woff2') format('woff2'),
+         url('/fonts/CenturyGothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* GENERAL */
 
 body {
@@ -308,7 +317,7 @@ a:hover {
 .projects .btn-container {
     margin-top: 40px;
     margin-bottom: 20px;
-    justify-content:space-between;
+    justify-content: space-between;
     font-size: 2em;
 }
 
@@ -458,4 +467,100 @@ footer {
     padding: 60px 0;
     background: linear-gradient(to right, #0072CE, #003F77);
     color: white;
+}
+
+
+
+
+/* MEDIAQUERIES */
+
+@media only screen and (max-width: 480px) {
+    /* GENERAL */
+
+    .container {
+        max-width: 100vw;
+        padding-top: 4vh;
+    }
+    
+    .row {
+        flex-direction: column-reverse;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+
+    /* NAVIGATION */
+
+    header {
+        max-width: 100%;
+    }
+    header .logo {
+        display: none;
+    }
+
+    nav, .nav-links {
+        height: 6vh;
+        justify-content: center;
+    }
+
+    .nav-links li:last-child{
+        display: none;
+    }
+
+    
+
+    /* PROFILE */
+
+    #profile-pic {
+        flex: 100%;
+    }
+
+    #profile-pic img {
+        max-width: 200%;
+        height: auto;
+    }
+
+    #profile-text {
+        text-align: center;
+        padding-left: 0;
+        padding-top: 0;
+    }
+
+    #welcome-text {
+        font-size: 1.4rem;
+    }
+
+    #profile h1 {
+        font-size: 3rem;
+    }
+
+    #detail-text {
+        font-size: 1.5rem;
+    }
+
+
+    /* ABOUT */
+
+   .technologies-logos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+   } 
+
+   .technologies-logos i {
+    display: flex;
+    justify-content: center;
+   }
+
+
+   /* PROJECTS */
+
+   .projects {
+    display: grid;
+   }
+
+   .project-card {
+    max-width: 420px;
+   }
 }
