@@ -543,6 +543,14 @@ footer {
         font-size: 1.5rem;
     }
 
+    #profile-text, .btn-container {
+        display:block;
+    }
+
+    .btn-container, .btn:last-child {
+        margin-top: 1rem;
+    }
+
 
     /* ABOUT */
 
@@ -554,6 +562,11 @@ footer {
    .technologies-logos i {
     display: flex;
     justify-content: center;
+   }
+
+   .about-text {
+    font-size: .8em;
+    line-height: normal;
    }
 
 
